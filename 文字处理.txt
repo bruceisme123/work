@@ -1,0 +1,7 @@
+/*information_schema数据表保存了MySQL服务器所有数据库的信息，如数据库名，数据库的表，表栏的数据类型与访问权限等。其中SCHEMATA表：提供了关于数据库的信息。TABLES表：给出了关于数据库中的表的信息。COLUMNS表：给出了表中的列信息。VIEWS表：给出了关于数据库中的视图的信息。*/
+SELECT COLUMN_NAME 列名,COLUMN_TYPE 数据类型,DATA_TYPE 字段类型,CHARACTER_MAXIMUM_LENGTH 长度,IS_NULLABLE 是否为空,COLUMN_DEFAULT 默认值,COLUMN_COMMENT 备注 
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE
+table_schema ='数据库名称'AND table_name = '表名称'
+
+
