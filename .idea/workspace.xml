@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="464c68c8-f358-41bf-b05a-6562fce23e5a" name="Default Changelist" comment="" />
+    <list default="true" id="464c68c8-f358-41bf-b05a-6562fce23e5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quick_set_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/quick_set_common.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iU2zRkwY8icJoFJHxOCni4pWM9" />
   <component name="ProjectViewState">
@@ -14,6 +41,61 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+  </component>
+  <component name="RunManager" selected="Python.quick_set_common">
+    <configuration name="quick_set_common" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quick_set_common.py" />
+      <option name="PARAMETERS" value="-1 C:\Users\bruce\Desktop\新.xls -2 C:\Users\bruce\Desktop\旧.xls -s Sheet1 -c 学号" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="slow_list" type="PythonConfigurationType" factoryName="Python">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../pyp/slow_list_exclusive.py" />
+      <option name="PARAMETERS" value="C:\Users\bruce\Desktop\新.xls C:\Users\bruce\Desktop\旧.xls Sheet1 学号" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.slow_list" />
+      <item itemvalue="Python.quick_set_common" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.quick_set_common" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -26,10 +108,92 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="1962" y="190" key="#Notifications" timestamp="1601949424936">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="1962" y="190" key="#Notifications/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601949424936" />
+    <state x="1697" y="130" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601971453589">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state x="272" y="144" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601968004370" />
+    <state x="1697" y="130" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601971453589" />
+    <state x="2064" y="87" key="FileChooserDialogImpl" timestamp="1601971451036">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601968002258" />
+    <state x="2064" y="87" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601971451036" />
+    <state x="2112" y="265" key="Github.ShareDialog" timestamp="1601951349286">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state x="2112" y="265" key="Github.ShareDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601951349286" />
+    <state width="1259" height="222" key="GridCell.Tab.0.bottom" timestamp="1601971903941">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601966506981" />
+    <state width="1259" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601971903941" />
+    <state width="1259" height="222" key="GridCell.Tab.0.center" timestamp="1601971903941">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601966506981" />
+    <state width="1259" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601971903941" />
+    <state width="1259" height="222" key="GridCell.Tab.0.left" timestamp="1601971903941">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601966506981" />
+    <state width="1259" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601971903941" />
+    <state width="1259" height="222" key="GridCell.Tab.0.right" timestamp="1601971903941">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601966506981" />
+    <state width="1259" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601971903941" />
+    <state width="1259" height="325" key="GridCell.Tab.1.bottom" timestamp="1601968777180">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601958707383" />
+    <state width="1259" height="325" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601968777180" />
+    <state width="1259" height="325" key="GridCell.Tab.1.center" timestamp="1601968777180">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601958707383" />
+    <state width="1259" height="325" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601968777180" />
+    <state width="1259" height="325" key="GridCell.Tab.1.left" timestamp="1601968777180">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601958707383" />
+    <state width="1259" height="325" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601968777180" />
+    <state width="1259" height="325" key="GridCell.Tab.1.right" timestamp="1601968777180">
+      <screen x="1600" y="-124" width="1280" height="984" />
+    </state>
+    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1601958707383" />
+    <state width="1259" height="325" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1601968777180" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../pyp/slow_list_exclusive.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="ori_dict" />
+        <watch expression="ori_dict" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
