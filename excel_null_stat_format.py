@@ -18,6 +18,7 @@
 import xlrd
 import xlsxwriter
 import openpyxl
+from openpyxl.styles import Border, Side, colors
 import sys
 import time
 import os
@@ -67,32 +68,53 @@ def write_excel(file_path,nrows,biaotou_list,col_num_list,col_rat_list):
             ws = wb.create_sheet(title=filename, index=pos)
         else:
             ws = wb.create_sheet(title=filename)
-        ws['A1']= filename
-        ws['B1'] = '数据总行数为：'+str(nrows)
-        ws['A2'] = "表中字段"
+        ws.merge_cells('A1:N1')
+        head_str = filename + "（记录条数："+ str(nrows) + "，提交人：            ，接收人：          ）"
+        # 设置首行字体加粗
+        ws['A1']= head_str
+        font_set = openpyxl.styles.Font(name='宋体', size=12, bold=True)
+        ws['A1'].font=font_set
+        # 为统计数据行设置边框
+        border_set = openpyxl.styles.Border(left=openpyxl.styles.Side(style='thin', color=colors.BLACK),
+                            right=openpyxl.styles.Side(style='thin', color=colors.BLACK),
+                            top=openpyxl.styles.Side(style='thin', color=colors.BLACK),
+                            bottom=openpyxl.styles.Side(style='thin', color=colors.BLACK))
+        ws['A2'] = "字段名称"
+        ws['A2'].border = border_set
         for i in range(1,len(biaotou_list)+1):
             ws.cell(row=2,column=i+1).value=biaotou_list[i-1]
-        ws['A3'] = "字段空值数"
-        for i in range(1,len(col_num_list)+1):
-            ws.cell(row=3,column=i+1).value=col_num_list[i-1]
-        ws['A4'] = "字段空值率"
+            ws.cell(row=2, column=i + 1).border = border_set
+        ws['A3'] = "空值率"
+        ws['A3'].border = border_set
         for i in range(1,len(col_rat_list)+1):
-            ws.cell(row=4,column=i+1).value=col_rat_list[i-1]
+            ws.cell(row=3,column=i+1).value=col_rat_list[i-1]
+            ws.cell(row=3, column=i + 1).border = border_set
+        ws['A4'] = "数据说明："
         if 'stat_result' in wb:
             del wb['stat_result']
         wb.save(dir_path)
     else:
         workbook = xlsxwriter.Workbook(dir_path)
         addsheet = workbook.add_worksheet(filename)
-        addsheet.write('A1', filename)
-        addsheet.write('B1', '数据总行数为：'+str(nrows))
-        addsheet.write('A2', '表中字段')
+        # 合并单元格并设置首行字体加粗
+        head_str = filename + "（记录条数：" + str(nrows) + "，提交人：            ，接收人：          ）"
+        merge_format = workbook.add_format({'bold': True})
+        addsheet.merge_range('A1:N1', head_str,merge_format)
+        # 为统计数据行设置边框
+        border_format = workbook.add_format({'border': 1})
+        addsheet.write('A2', '字段名称')
         addsheet.write_row('B2', biaotou_list)
-        addsheet.write('A3', '字段空值数')
-        addsheet.write_row('B3', col_num_list)
-        addsheet.write('A4', '字段空值率')
-        addsheet.write_row('B4', col_rat_list)
+        addsheet.write('A3', '空值率')
+        addsheet.write_row('B3', col_rat_list)
+        addsheet.write('A4', '数据说明：')
+        # addsheet.set_row(2, None, border_format)
+        # 根据表头长度计算出数据范围并转化为excel的列表示
+        x = xlsxwriter.utility.xl_col_to_name(len(biaotou_list))
+        pos = 'A2:'+ x +'3'
+        addsheet.conditional_format(pos, {'type':'cell','format': border_format})
         workbook.close()
+        # sheet.column_dimensions['C'].width = 30
+
 
 if __name__ == '__main__':
     start = time.perf_counter()
