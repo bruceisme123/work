@@ -29,9 +29,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="464c68c8-f358-41bf-b05a-6562fce23e5a" name="Default Changelist" comment="增加excel_null_stat.py文件，统计excel表中每列（字段）的空值率（以表的整体行数或“工号/姓名”列为基准）">
+    <list default="true" id="464c68c8-f358-41bf-b05a-6562fce23e5a" name="Default Changelist" comment="修改excel_null_stat.py文件名，增加文件excel_null_stat_format.py(增加了单元格的格式设置)">
+      <change afterPath="$PROJECT_DIR$/excel_null_stat_simple.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excel_nul_lstat.py" beforeDir="false" afterPath="$PROJECT_DIR$/excel_null_stat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyp/excel_stat.py" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -115,7 +115,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../pyp/excel_stat.py" />
-      <option name="PARAMETERS" value="F:\测试\ceshi2.xlsx" />
+      <option name="PARAMETERS" value="C:\Users\bruce\Desktop\临时测试" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -188,9 +188,9 @@
     </configuration>
     <list>
       <item itemvalue="Python.ap_stat" />
+      <item itemvalue="Python.excel_stat" />
       <item itemvalue="Python.slow_list" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.excel_stat" />
       <item itemvalue="Python.quick_set_common" />
     </list>
     <recent_temporary>
@@ -233,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614395601228</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改excel_null_stat.py文件名，增加文件excel_null_stat_format.py(增加了单元格的格式设置)">
+      <created>1614508175182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614508175182</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -274,18 +281,19 @@
     <MESSAGE value="传参修改及集合、excel写入操作完善" />
     <MESSAGE value="新建test分支，增加ap_stat文件，修改README.md" />
     <MESSAGE value="增加excel_null_stat.py文件，统计excel表中每列（字段）的空值率（以表的整体行数或“工号/姓名”列为基准）" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加excel_null_stat.py文件，统计excel表中每列（字段）的空值率（以表的整体行数或“工号/姓名”列为基准）" />
+    <MESSAGE value="修改excel_null_stat.py文件名，增加文件excel_null_stat_format.py(增加了单元格的格式设置)" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改excel_null_stat.py文件名，增加文件excel_null_stat_format.py(增加了单元格的格式设置)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1962" y="190" key="#Notifications" timestamp="1614308844908">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="1962" y="190" key="#Notifications/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614308844908" />
-    <state x="1616" y="-101" width="1092" height="961" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614496450452">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state x="272" y="96" width="1092" height="984" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614513594274">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="272" y="96" width="1092" height="764" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614394758238" />
-    <state x="1616" y="-101" width="1092" height="961" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614496450452" />
+    <state x="272" y="96" width="1092" height="764" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614513594274" />
+    <state x="1616" y="-124" width="1092" height="984" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614510376007" />
     <state x="1995" y="69" key="#xdebugger.evaluate" timestamp="1607133263302">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
@@ -294,60 +302,60 @@
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="1692" y="-32" width="1096" height="800" key="DiffContextDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1608296341560" />
-    <state x="2064" y="87" key="FileChooserDialogImpl" timestamp="1614245799945">
+    <state x="2064" y="87" key="FileChooserDialogImpl" timestamp="1614510371772">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500159668" />
-    <state x="2064" y="87" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614245799945" />
-    <state width="1259" height="262" key="GridCell.Tab.0.bottom" timestamp="1614500592988">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state x="2064" y="87" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614510371772" />
+    <state width="1579" height="324" key="GridCell.Tab.0.bottom" timestamp="1614561386792">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="262" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500592988" />
-    <state width="1259" height="262" key="GridCell.Tab.0.center" timestamp="1614500592988">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386792" />
+    <state width="1259" height="382" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339489" />
+    <state width="1579" height="324" key="GridCell.Tab.0.center" timestamp="1614561386787">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="262" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500592988" />
-    <state width="1259" height="262" key="GridCell.Tab.0.left" timestamp="1614500592988">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386787" />
+    <state width="1259" height="382" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339489" />
+    <state width="1579" height="324" key="GridCell.Tab.0.left" timestamp="1614561386786">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="262" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500592988" />
-    <state width="1259" height="262" key="GridCell.Tab.0.right" timestamp="1614500592988">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386786" />
+    <state width="1259" height="382" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339489" />
+    <state width="1579" height="324" key="GridCell.Tab.0.right" timestamp="1614561386790">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="262" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500592988" />
-    <state width="1259" height="382" key="GridCell.Tab.1.bottom" timestamp="1614500553501">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386790" />
+    <state width="1259" height="382" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339489" />
+    <state width="1579" height="324" key="GridCell.Tab.1.bottom" timestamp="1614561386793">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="382" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500553501" />
-    <state width="1259" height="382" key="GridCell.Tab.1.center" timestamp="1614500553501">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="382" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339490" />
+    <state width="1579" height="324" key="GridCell.Tab.1.center" timestamp="1614561386793">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="382" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500553501" />
-    <state width="1259" height="382" key="GridCell.Tab.1.left" timestamp="1614500553501">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="382" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339489" />
+    <state width="1579" height="324" key="GridCell.Tab.1.left" timestamp="1614561386793">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="382" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500553501" />
-    <state width="1259" height="382" key="GridCell.Tab.1.right" timestamp="1614500553501">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1579" height="324" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="382" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339489" />
+    <state width="1579" height="324" key="GridCell.Tab.1.right" timestamp="1614561386793">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="325" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500184384" />
-    <state width="1259" height="382" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614500553501" />
+    <state width="1579" height="324" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="382" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614511339490" />
     <state x="1665" y="-59" key="SettingsEditor" timestamp="1608290312629">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="86" y="104" key="SettingsEditor/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1606878218353" />
     <state x="1665" y="-59" key="SettingsEditor/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1608290312629" />
-    <state x="1832" y="87" key="Vcs.Push.Dialog.v2" timestamp="1614395678557">
+    <state x="1832" y="87" key="Vcs.Push.Dialog.v2" timestamp="1614508182113">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
-    <state x="1832" y="87" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614395678557" />
+    <state x="1832" y="87" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614508182113" />
     <state width="648" height="500" key="XDebugger.FullValuePopup" timestamp="1607133609402">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
