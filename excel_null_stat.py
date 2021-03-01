@@ -18,6 +18,7 @@
 import xlrd
 import xlsxwriter
 import openpyxl
+from openpyxl.styles import Border, Side, colors
 import sys
 import time
 import os
@@ -53,6 +54,25 @@ def read_excel(path):
         col_num_list.append(j)
         col_rat_list.append(str(percent)+"%")
 
+# 简化版：每个输入excel分别生成一个输出excel,不更新已有文件，相同目录下生成“原文件名+result.xlsx”文件
+def write_excel_simple(file_path,nrows,biaotou_list,col_num_list,col_rat_list):
+    filename = os.path.basename(file_path).split('.')[-2]
+    result_name = filename+'result.xlsx'
+    dir_path = os.path.dirname(file_path)+'\\'+result_name
+    workbook = xlsxwriter.Workbook(dir_path)
+    addsheet = workbook.add_worksheet(filename)
+    head_str = filename + "（记录条数：" + str(nrows) + "，提交人：            ，接收人：          ）"
+    addsheet.merge_range('A1:N1',head_str)
+    head_str = filename + "（记录条数：" + str(nrows) + "，提交人：            ，接收人：          ）"
+    addsheet.write('A1', head_str)
+    addsheet.write('A2', '字段名称')
+    addsheet.write_row('B2', biaotou_list)
+    addsheet.write('A3', '空值率')
+    addsheet.write_row('B3', col_rat_list)
+    addsheet.write('A4', '数据说明：')
+    workbook.close()
+
+# 更新+sheet版：将当前文件夹只存在一个stat_result.xlsx文件，每个sheet对应本文件夹的每个输入excel；stat_result.xlsx文件可更新
 def write_excel(file_path,nrows,biaotou_list,col_num_list,col_rat_list):
     filename = os.path.basename(file_path).split('.')[-2]
     dir_path = os.path.dirname(file_path)+r'\stat_result.xlsx'
@@ -94,6 +114,67 @@ def write_excel(file_path,nrows,biaotou_list,col_num_list,col_rat_list):
         workbook.close()
         # sheet.column_dimensions['C'].width = 30
 
+# 更新+sheet+格式版：在write_excel()基础上增加了输出格式的调整
+def write_excel_format(file_path,nrows,biaotou_list,col_num_list,col_rat_list):
+    filename = os.path.basename(file_path).split('.')[-2]
+    dir_path = os.path.dirname(file_path)+r'\stat_result.xlsx'
+    # 如果excel文件已存在则更新或新建sheet，如果文件不存在则新建excel文件
+    if os.path.exists(dir_path):
+        wb = openpyxl.load_workbook(dir_path)
+        # 更新已存在的sheet：删除已存在的sheet，重新添加sheet
+        if filename in wb:
+            # 获取已存在sheet所在位置，保证新建时顺序不乱
+            pos = wb.sheetnames.index(filename)
+            del wb[filename]
+            ws = wb.create_sheet(title=filename, index=pos)
+        else:
+            ws = wb.create_sheet(title=filename)
+        ws.merge_cells('A1:N1')
+        head_str = filename + "（记录条数："+ str(nrows) + "，提交人：            ，接收人：          ）"
+        # 设置首行字体加粗
+        ws['A1']= head_str
+        font_set = openpyxl.styles.Font(name='宋体', size=12, bold=True)
+        ws['A1'].font=font_set
+        # 为统计数据行设置边框
+        border_set = openpyxl.styles.Border(left=openpyxl.styles.Side(style='thin', color=colors.BLACK),
+                            right=openpyxl.styles.Side(style='thin', color=colors.BLACK),
+                            top=openpyxl.styles.Side(style='thin', color=colors.BLACK),
+                            bottom=openpyxl.styles.Side(style='thin', color=colors.BLACK))
+        ws['A2'] = "字段名称"
+        ws['A2'].border = border_set
+        for i in range(1,len(biaotou_list)+1):
+            ws.cell(row=2,column=i+1).value=biaotou_list[i-1]
+            ws.cell(row=2, column=i + 1).border = border_set
+        ws['A3'] = "空值率"
+        ws['A3'].border = border_set
+        for i in range(1,len(col_rat_list)+1):
+            ws.cell(row=3,column=i+1).value=col_rat_list[i-1]
+            ws.cell(row=3, column=i + 1).border = border_set
+        ws['A4'] = "数据说明："
+        if 'stat_result' in wb:
+            del wb['stat_result']
+        wb.save(dir_path)
+    else:
+        workbook = xlsxwriter.Workbook(dir_path)
+        addsheet = workbook.add_worksheet(filename)
+        # 合并单元格并设置首行字体加粗
+        head_str = filename + "（记录条数：" + str(nrows) + "，提交人：            ，接收人：          ）"
+        merge_format = workbook.add_format({'bold': True})
+        addsheet.merge_range('A1:N1', head_str,merge_format)
+        # 为统计数据行设置边框
+        border_format = workbook.add_format({'border': 1})
+        addsheet.write('A2', '字段名称')
+        addsheet.write_row('B2', biaotou_list)
+        addsheet.write('A3', '空值率')
+        addsheet.write_row('B3', col_rat_list)
+        addsheet.write('A4', '数据说明：')
+        # addsheet.set_row(2, None, border_format)
+        # 根据表头长度计算出数据范围并转化为excel的列表示
+        x = xlsxwriter.utility.xl_col_to_name(len(biaotou_list))
+        pos = 'A2:'+ x +'3'
+        addsheet.conditional_format(pos, {'type':'cell','format': border_format})
+        workbook.close()
+        # sheet.column_dimensions['C'].width = 30
 
 if __name__ == '__main__':
     start = time.perf_counter()
@@ -112,7 +193,9 @@ if __name__ == '__main__':
                 col_num_list = []
                 col_rat_list = []
                 read_excel(file_path)
-                write_excel(file_path, nrows, biaotou_list, col_num_list, col_rat_list)
+                write_excel_simple(file_path, nrows, biaotou_list, col_num_list, col_rat_list)
+                # write_excel(file_path, nrows, biaotou_list, col_num_list, col_rat_list)
+                # write_excel_format(file_path, nrows, biaotou_list, col_num_list, col_rat_list)
                 print('总行数为' + str(nrows))
                 print('各字段缺失情况：')
                 print(biaotou_list)
