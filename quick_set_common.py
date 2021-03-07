@@ -5,7 +5,7 @@
 或者
 “python quick_set_common.py --src=源excel文件名 --tar=目标excel文件名 --sheet=比较的sheet表格名称 --col=比较的列名”
 ---------------前提条件----------------
-1、源表和目标表格式一致,表头列名一致
+1、源表和目标表格式一致,要比对的sheet表名称一致，表头列名一致
 2、不存在合并单元格
 3、excel第1行为表头，从第2行开始比对,其他统计数据也仅针对从第2行开始的数据
 4、适用于数据为单列，依据此列对数据进行取交集、并集、差集等（例如：数据表中只有学号一列，求两表学号的交集、并集、差集）
@@ -37,6 +37,7 @@ import sys
 # def read_excel(ori_path, tar_path):
 #     wb_ori = xlrd.open_workbook(ori_path)  # 打开原始文件
 #     wb_tar = xlrd.open_workbook(tar_path)  # 打开目标文件
+#     for sheet_name in wb_ori.sheet_names():
 #     for sheet_name in wb_ori.sheet_names():
 #         print("开始比对sheet：%s" % sheet_name)
 #         sheet_ori = wb_ori.sheet_by_name(sheet_name)
@@ -77,20 +78,31 @@ def diff_single(sheet_ori, sheet_tar, col_name):
     ori_dict = {}
     tar_dict = {}
     # 获取对比列的index
-    col_index = sheet_ori.row_values(0).index(col_name)
+    ori_col_index = sheet_ori.row_values(0).index(col_name)
+    tar_col_index = sheet_tar.row_values(0).index(col_name)
     # 第一行为表头，所以从第二行开始进行数据获取
     for rows in range(1, sheet_ori.nrows):
         # 第rows行中，对比列的值作为字典的key（从而可以实现本表中列名值的自动去重），整行数据组成的list作为字典的value
+        key = sheet_ori.row_values(rows)[ori_col_index]
+        if not isinstance(key, str):
+            key=str(int(key))
         ori_list = sheet_ori.row_values(rows)  # 源表i行数据
-        ori_dict[sheet_ori.row_values(rows)[col_index]] = ori_list
+        ori_dict[key] = ori_list
     for rows in range(1, sheet_tar.nrows):
         tar_list = sheet_tar.row_values(rows)
-        tar_dict[sheet_tar.row_values(rows)[col_index]] = tar_list
+        key=sheet_tar.row_values(rows)[tar_col_index]
+        if not isinstance(key,str):
+            key=str(int(key))
+        tar_dict[key] = tar_list
     inter_keys = ori_dict.keys() & tar_dict.keys()
     diff_keys = ori_dict.keys() ^ tar_dict.keys()
     union_keys = ori_dict.keys() | tar_dict.keys()
     diff1_keys = ori_dict.keys() - tar_dict.keys()  # 只在源表中存在的key
     diff2_keys = tar_dict.keys() - ori_dict.keys()  # 只在目的表中存在的key
+    print('源表比对列的值为：')
+    print(ori_dict.keys())
+    print('目的表比对列的值为：')
+    print(tar_dict.keys())
     print('两表%s列交集共有%d条，分别为：' % (col_name, len(inter_keys)))
     print(inter_keys)
     for key in inter_keys:

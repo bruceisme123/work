@@ -29,9 +29,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="464c68c8-f358-41bf-b05a-6562fce23e5a" name="Default Changelist" comment="更新空行判断，去掉写入函数中无用形参col_num_list，增加列宽调整。">
+    <list default="true" id="464c68c8-f358-41bf-b05a-6562fce23e5a" name="Default Changelist" comment="更新文件夹下stat_result文件排除逻辑，新增纯openpyxl的读写方法：read_excel_openpyxl、write_excel_openpyxl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excel_null_stat.py" beforeDir="false" afterPath="$PROJECT_DIR$/excel_null_stat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quick_set_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/quick_set_common.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <recent name="D:\work" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.excel_null_stat">
+  <component name="RunManager" selected="Python.quick_set_common">
     <configuration name="ap_stat" type="PythonConfigurationType" factoryName="Python">
       <module name="pyp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,7 +160,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quick_set_common.py" />
-      <option name="PARAMETERS" value="-1 C:\Users\bruce\Desktop\新.xls -2 C:\Users\bruce\Desktop\旧.xls -s Sheet1 -c 学号" />
+      <option name="PARAMETERS" value="-1 C:\Users\bruce\Desktop\信息门户.xls -2 C:\Users\bruce\Desktop\人事228.xls -s Sheet1 -c 工号" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -212,11 +212,11 @@
     </configuration>
     <list>
       <item itemvalue="Python.ap_stat" />
+      <item itemvalue="Python.excel_null_stat" />
       <item itemvalue="Python.excel_stat" />
+      <item itemvalue="Python.quick_set_common" />
       <item itemvalue="Python.slow_list" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.quick_set_common" />
-      <item itemvalue="Python.excel_null_stat" />
     </list>
     <recent_temporary>
       <list>
@@ -285,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614763806270</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="更新文件夹下stat_result文件排除逻辑，新增纯openpyxl的读写方法：read_excel_openpyxl、write_excel_openpyxl">
+      <created>1614925096847</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614925096847</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -330,18 +337,19 @@
     <MESSAGE value="增加文件excel_null_stat_simple.py(简化了原脚本，避免了更新文件导致的错误)" />
     <MESSAGE value="将简化版、原版、格式版合并为一个脚本中的不同方法。" />
     <MESSAGE value="更新空行判断，去掉写入函数中无用形参col_num_list，增加列宽调整。" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新空行判断，去掉写入函数中无用形参col_num_list，增加列宽调整。" />
+    <MESSAGE value="更新文件夹下stat_result文件排除逻辑，新增纯openpyxl的读写方法：read_excel_openpyxl、write_excel_openpyxl" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新文件夹下stat_result文件排除逻辑，新增纯openpyxl的读写方法：read_excel_openpyxl、write_excel_openpyxl" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1962" y="190" key="#Notifications" timestamp="1614308844908">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="1962" y="190" key="#Notifications/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614308844908" />
-    <state x="1603" y="-124" width="1092" height="984" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614924927928">
+    <state x="1603" y="-124" width="1092" height="984" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615115677414">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="272" y="96" width="1092" height="764" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614513594274" />
-    <state x="1603" y="-124" width="1092" height="984" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614924927928" />
+    <state x="1603" y="-124" width="1092" height="984" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1615115677414" />
     <state x="1995" y="69" key="#xdebugger.evaluate" timestamp="1607133263302">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
@@ -355,55 +363,55 @@
     </state>
     <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1607500159668" />
     <state x="2064" y="87" key="FileChooserDialogImpl/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614924853154" />
-    <state width="1259" height="325" key="GridCell.Tab.0.bottom" timestamp="1614924970296">
+    <state width="1259" height="325" key="GridCell.Tab.0.bottom" timestamp="1615119217530">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386792" />
-    <state width="1259" height="325" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614924970296" />
-    <state width="1259" height="325" key="GridCell.Tab.0.center" timestamp="1614924970296">
+    <state width="1259" height="381" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734800" />
+    <state width="1259" height="325" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1615119217530" />
+    <state width="1259" height="325" key="GridCell.Tab.0.center" timestamp="1615119217530">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386787" />
-    <state width="1259" height="325" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614924970296" />
-    <state width="1259" height="325" key="GridCell.Tab.0.left" timestamp="1614924970296">
+    <state width="1259" height="381" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734800" />
+    <state width="1259" height="325" key="GridCell.Tab.0.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1615119217530" />
+    <state width="1259" height="325" key="GridCell.Tab.0.left" timestamp="1615119217530">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386786" />
-    <state width="1259" height="325" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614924970296" />
-    <state width="1259" height="325" key="GridCell.Tab.0.right" timestamp="1614924970296">
+    <state width="1259" height="381" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734799" />
+    <state width="1259" height="325" key="GridCell.Tab.0.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1615119217530" />
+    <state width="1259" height="325" key="GridCell.Tab.0.right" timestamp="1615119217530">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386790" />
-    <state width="1259" height="325" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614924970296" />
-    <state width="1259" height="381" key="GridCell.Tab.1.bottom" timestamp="1614911334431">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1259" height="381" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734800" />
+    <state width="1259" height="325" key="GridCell.Tab.0.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1615119217530" />
+    <state width="1259" height="381" key="GridCell.Tab.1.bottom" timestamp="1614938734801">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="381" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734801" />
     <state width="1259" height="381" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614911334431" />
-    <state width="1259" height="381" key="GridCell.Tab.1.center" timestamp="1614911334431">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1259" height="381" key="GridCell.Tab.1.center" timestamp="1614938734800">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="381" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734800" />
     <state width="1259" height="381" key="GridCell.Tab.1.center/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614911334431" />
-    <state width="1259" height="381" key="GridCell.Tab.1.left" timestamp="1614911334431">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1259" height="381" key="GridCell.Tab.1.left" timestamp="1614938734800">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="381" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734800" />
     <state width="1259" height="381" key="GridCell.Tab.1.left/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614911334431" />
-    <state width="1259" height="381" key="GridCell.Tab.1.right" timestamp="1614911334431">
-      <screen x="1600" y="-124" width="1280" height="984" />
+    <state width="1259" height="381" key="GridCell.Tab.1.right" timestamp="1614938734800">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="324" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614561386793" />
+    <state width="1259" height="381" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1614938734800" />
     <state width="1259" height="381" key="GridCell.Tab.1.right/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614911334431" />
     <state x="1665" y="-59" key="SettingsEditor" timestamp="1614907907245">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
     <state x="86" y="104" key="SettingsEditor/0.0.1600.860/1600.-124.1280.984@0.0.1600.860" timestamp="1606878218353" />
     <state x="1665" y="-59" key="SettingsEditor/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614907907245" />
-    <state x="1832" y="87" key="Vcs.Push.Dialog.v2" timestamp="1614763896697">
+    <state x="1832" y="87" key="Vcs.Push.Dialog.v2" timestamp="1614925111088">
       <screen x="1600" y="-124" width="1280" height="984" />
     </state>
-    <state x="1832" y="87" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614763896697" />
+    <state x="1832" y="87" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.-124.1280.984@1600.-124.1280.984" timestamp="1614925111088" />
     <state x="1832" y="211" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1280.984@1600.0.1280.984" timestamp="1614589666617" />
     <state width="648" height="500" key="XDebugger.FullValuePopup" timestamp="1607133609402">
       <screen x="1600" y="-124" width="1280" height="984" />
